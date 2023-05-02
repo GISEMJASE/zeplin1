@@ -7,82 +7,43 @@
 
 import UIKit
 
-class Top3ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView.tag == 777 ? arrElementosTop.count : arrElementosTop.count
-    }
-
+class Top3ViewController: UIViewController {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        if collectionView.tag == 777 {
-            let cCell = collectionView.dequeueReusableCell(withReuseIdentifier: Top3CollectionViewCell.identifier, for: indexPath) as? Top3CollectionViewCell ?? Top3CollectionViewCell()
-            
-            let cat = Categories()
-            cat.title = "Titulo Asombroso"
-            cat.rate = "Subtitulo no tan asombroso"
-            cat.images?[0] = "imagenuno"
-            cat.images?[1] = "imagenuno"
-            cat.images?[2] = "imagenuno"
-            cat.images?[3] = "imagenuno"
-            
-            
-            cCell.setUpCollectionCell(categoria: cat)
-            
-            
-            return cCell
-        }else {
-            //AQUI SE PONE LA CONDIFURACION DE EEL SEGUNDO COLLECTION VIEW CELL
-            let cCell = collectionView.dequeueReusableCell(withReuseIdentifier: Top3CollectionViewCell.identifier, for: indexPath) as? Top3CollectionViewCell ?? Top3CollectionViewCell()
-            
-            let cat = Categories()
-            cat.title = "Titulo Asombroso"
-            cat.rate = "Subtitulo no tan asombroso"
-            cat.images?[0] = "imagenuno"
-            cat.images?[1] = "imagenuno"
-            cat.images?[2] = "imagenuno"
-            cat.images?[3] = "imagenuno"
-            
-            
-            cCell.setUpCollectionCell(categoria: cat)
-            
-            return cCell
-        }
-    }
-    
-    
-
     @IBOutlet weak var cvTop: UICollectionView!
+    @IBOutlet weak var cvBottom: UICollectionView!
+    @IBOutlet weak var tbleviewInicial: UITableView!
     
-    let arrElementosTop: [String] = ["Chinese","German","Fitness","Healty","Enjoy&Fat"]
     
+    let cateDate: DataCate = DataCate()
+    var arreElementosTop: [Categories] = []
+    var arrElementosBottom: [Categories] = []
+    let categoria: DataCate = DataCate()
+    let arrPrin: [String] = ["La hora del te","Coffee Breack","La hora loca"]
+    let arrPrinImages: [String] = ["prin1", "prin2", "prin3"]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpCollectonview()
-
-        // Do any additional setup after loading the view.
+        self.arreElementosTop = categoria.setCateg()
+        print("\n\n\n  arreCatego --->  \(arreElementosTop.count)    \n\n\n")
+        self.setUpCollectonview()
     }
+    
     func setUpCollectonview(){
-        self.cvTop.delegate = self
-        self.cvTop.dataSource = self
-        self.cvTop.tag = 777
-        self.cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
-
-
+        cvTop.delegate = self
+        cvTop.dataSource = self
+        cvTop.tag = 777
+        cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+        
+        cvBottom.delegate = self
+        cvBottom.dataSource = self
+        cvBottom.tag = 999
+        cvBottom.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+        
     }
-   
-        
-       
-        
-        
-        
-        
     
+  
     
-    
-    
-    
-    }
+}
 
-    
+

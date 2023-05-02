@@ -18,6 +18,10 @@
 		A2607AE4297F09C4002BA4E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2607AE2297F09C4002BA4E8 /* Main.storyboard */; };
 		A2607AE6297F09C9002BA4E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2607AE5297F09C9002BA4E8 /* Assets.xcassets */; };
 		A2607AE9297F09C9002BA4E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2607AE7297F09C9002BA4E8 /* LaunchScreen.storyboard */; };
+		A2BB3D792A017EEB007B9330 /* Top3ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB3D782A017EEA007B9330 /* Top3ViewController+Extension.swift */; };
+		A2BB3D7B2A01B783007B9330 /* DateCate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB3D7A2A01B783007B9330 /* DateCate.swift */; };
+		A2BB3D7E2A01C291007B9330 /* BigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB3D7C2A01C291007B9330 /* BigTableViewCell.swift */; };
+		A2BB3D7F2A01C291007B9330 /* BigTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2BB3D7D2A01C291007B9330 /* BigTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		A2607AE5297F09C9002BA4E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2607AE8297F09C9002BA4E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2607AEA297F09C9002BA4E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2BB3D782A017EEA007B9330 /* Top3ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Top3ViewController+Extension.swift"; sourceTree = "<group>"; };
+		A2BB3D7A2A01B783007B9330 /* DateCate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCate.swift; sourceTree = "<group>"; };
+		A2BB3D7C2A01C291007B9330 /* BigTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTableViewCell.swift; sourceTree = "<group>"; };
+		A2BB3D7D2A01C291007B9330 /* BigTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A23100D729FA3FDD009A0AFF /* categories.swift */,
+				A2BB3D7A2A01B783007B9330 /* DateCate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -59,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				A23100D529FA3D95009A0AFF /* ProjectExtensions.swift */,
+				A2BB3D782A017EEA007B9330 /* Top3ViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -68,6 +78,8 @@
 			children = (
 				A23100D129FA3717009A0AFF /* Top3CollectionViewCell.swift */,
 				A23100D229FA3717009A0AFF /* Top3CollectionViewCell.xib */,
+				A2BB3D7C2A01C291007B9330 /* BigTableViewCell.swift */,
+				A2BB3D7D2A01C291007B9330 /* BigTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 			files = (
 				A23100D429FA3717009A0AFF /* Top3CollectionViewCell.xib in Resources */,
 				A2607AE9297F09C9002BA4E8 /* LaunchScreen.storyboard in Resources */,
+				A2BB3D7F2A01C291007B9330 /* BigTableViewCell.xib in Resources */,
 				A2607AE6297F09C9002BA4E8 /* Assets.xcassets in Resources */,
 				A2607AE4297F09C4002BA4E8 /* Main.storyboard in Resources */,
 			);
@@ -178,12 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BB3D7E2A01C291007B9330 /* BigTableViewCell.swift in Sources */,
 				A23100CD29FA31BC009A0AFF /* Top3ViewController.swift in Sources */,
 				A23100D629FA3D95009A0AFF /* ProjectExtensions.swift in Sources */,
+				A2BB3D792A017EEB007B9330 /* Top3ViewController+Extension.swift in Sources */,
 				A2607AE1297F09C4002BA4E8 /* ViewController.swift in Sources */,
 				A2607ADD297F09C4002BA4E8 /* AppDelegate.swift in Sources */,
 				A23100D329FA3717009A0AFF /* Top3CollectionViewCell.swift in Sources */,
 				A23100D829FA3FDD009A0AFF /* categories.swift in Sources */,
+				A2BB3D7B2A01B783007B9330 /* DateCate.swift in Sources */,
 				A2607ADF297F09C4002BA4E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

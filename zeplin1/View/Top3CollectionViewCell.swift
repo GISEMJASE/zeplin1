@@ -27,9 +27,12 @@ class Top3CollectionViewCell: UICollectionViewCell {
     }
     
     public func setUpCollectionCell(categoria: Categories) {
+        
+        print("\n\n\n    categorias ----> \(categoria)  \n\n\n")
+        
         lblTitle.text = categoria.title
         lblrate.text = categoria.rate
-        lbltimer.text = categoria.timerr
+            lbltimer.text = categoria.timerr
         img1.image = UIImage(named: categoria.images?[0] ?? "")
         img2.image = UIImage(named: categoria.images?[1] ?? "")
         img3.image = UIImage(named: categoria.images?[2] ?? "")
