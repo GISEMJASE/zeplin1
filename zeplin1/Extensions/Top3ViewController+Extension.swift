@@ -7,9 +7,27 @@
 
 import UIKit
 
-extension Top3ViewController: UICollectionViewDataSource,  UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
-
+extension Top3ViewController:  UITableViewDelegate & UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(arrPrin.count)
+        return arrPrin.count
+    
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BigTableViewCell", for: indexPath) as? BigTableViewCell ?? BigTableViewCell()
+        cell.lblTitle.text = arrPrin[indexPath.row]
+        cell.imIMAGE.image = UIImage(named: arrPrinImages[indexPath.row])
+        return cell
+        
+    }
+    
+}
+
+
+extension Top3ViewController: UICollectionViewDataSource &  UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionView.tag == 777 ? arreElementosTop.count : arreElementosTop.count
@@ -30,22 +48,4 @@ extension Top3ViewController: UICollectionViewDataSource,  UICollectionViewDeleg
             return cCell
         }
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrPrin.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BigTableViewCell", for: indexPath) as? BigTableViewCell ?? BigTableViewCell()
- 
-        cell.lblTitle.text = arrPrin[indexPath.row]
-        cell.imIMAGE.image = UIImage(named: arrPrinImages[indexPath.row])
-        return cell
-        
-    }
-    
 }

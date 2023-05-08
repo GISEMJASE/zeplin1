@@ -15,7 +15,7 @@ class BigTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imIMAGE.layer.cornerRadius = 1
+        imIMAGE.layer.cornerRadius = 3
         // Initialization code
     }
 

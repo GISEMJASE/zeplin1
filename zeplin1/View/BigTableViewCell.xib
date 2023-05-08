@@ -21,9 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFv-Ta-ri8">
                         <rect key="frame" x="4" y="6" width="374" height="152"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8kc-rH-1WN">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8kc-rH-1WN">
+                                <rect key="frame" x="16" y="16" width="342" height="120"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZgX-xU-b4w">
                                 <rect key="frame" x="164.66666666666666" y="65.666666666666671" width="45" height="21"/>
@@ -39,8 +38,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZgX-xU-b4w" firstAttribute="centerX" secondItem="kFv-Ta-ri8" secondAttribute="centerX" id="Chs-Fb-bnc"/>
-                            <constraint firstItem="ZgX-xU-b4w" firstAttribute="centerY" secondItem="kFv-Ta-ri8" secondAttribute="centerY" id="INA-NA-VJn"/>
+                            <constraint firstAttribute="bottom" secondItem="8kc-rH-1WN" secondAttribute="bottom" constant="16" id="49C-GH-QvI"/>
+                            <constraint firstItem="ZgX-xU-b4w" firstAttribute="centerX" secondItem="8kc-rH-1WN" secondAttribute="centerX" id="5dd-Xe-OYg"/>
+                            <constraint firstAttribute="trailing" secondItem="8kc-rH-1WN" secondAttribute="trailing" constant="16" id="9eo-ie-v7f"/>
+                            <constraint firstItem="ZgX-xU-b4w" firstAttribute="centerY" secondItem="8kc-rH-1WN" secondAttribute="centerY" id="HS6-nZ-TPm"/>
+                            <constraint firstItem="8kc-rH-1WN" firstAttribute="top" secondItem="kFv-Ta-ri8" secondAttribute="top" constant="16" id="wEz-4P-OQH"/>
+                            <constraint firstItem="8kc-rH-1WN" firstAttribute="leading" secondItem="kFv-Ta-ri8" secondAttribute="leading" constant="16" id="wfN-Xm-4GX"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,6 +55,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imIMAGE" destination="8kc-rH-1WN" id="Ghh-AS-Asr"/>
+                <outlet property="lblTitle" destination="ZgX-xU-b4w" id="Opw-ZI-uVl"/>
+            </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
         </tableViewCell>
     </objects>

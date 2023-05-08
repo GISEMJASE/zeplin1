@@ -11,7 +11,13 @@ class Top3ViewController: UIViewController {
     
     @IBOutlet weak var cvTop: UICollectionView!
     @IBOutlet weak var cvBottom: UICollectionView!
-    @IBOutlet weak var tbleviewInicial: UITableView!
+    @IBOutlet weak var tbleviewInicial: UITableView!{
+        didSet{
+            self.tbleviewInicial.delegate = self
+            self.tbleviewInicial.dataSource = self
+            self.tbleviewInicial.register(UINib(nibName: "BigTableViewCell", bundle: .main), forCellReuseIdentifier: "BigTableViewCell")
+        }
+    }
     
     
     let cateDate: DataCate = DataCate()
@@ -35,10 +41,10 @@ class Top3ViewController: UIViewController {
         cvTop.tag = 777
         cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
         
-        cvBottom.delegate = self
-        cvBottom.dataSource = self
-        cvBottom.tag = 999
-        cvBottom.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+//        cvBottom.delegate = self
+//        cvBottom.dataSource = self
+//        cvBottom.tag = 999
+//        cvBottom.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
         
     }
     
