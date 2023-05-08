@@ -10,9 +10,7 @@ import UIKit
 extension Top3ViewController:  UITableViewDelegate & UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(arrPrin.count)
         return arrPrin.count
-    
     }
     
     

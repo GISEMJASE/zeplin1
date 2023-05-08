@@ -30,20 +30,20 @@ class Top3ViewController: UIViewController {
     }
     
     func setUpCellOnViews(){
-//
+
         self.cvTop.delegate = self
         self.cvTop.dataSource = self
         self.cvTop.tag = 777
         self.cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
-//
-//        self.tbleviewInicial.delegate = self
-//        self.tbleviewInicial.dataSource = self
-//        self.tbleviewInicial.register(BigTableViewCell.nib, forCellReuseIdentifier: BigTableViewCell.identifier)
+
+        self.tbleviewInicial.delegate = self
+        self.tbleviewInicial.dataSource = self
+        self.tbleviewInicial.register(BigTableViewCell.nib, forCellReuseIdentifier: BigTableViewCell.identifier)
         
-//        cvBottom.delegate = self
-//        cvBottom.dataSource = self
-//        cvBottom.tag = 999
-//        cvBottom.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+        cvBottom.delegate = self
+        cvBottom.dataSource = self
+        cvBottom.tag = 999
+        cvBottom.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
         
     }
     
