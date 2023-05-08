@@ -17,7 +17,7 @@ extension Top3ViewController:  UITableViewDelegate & UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BigTableViewCell", for: indexPath) as? BigTableViewCell ?? BigTableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: BigTableViewCell.identifier, for: indexPath) as? BigTableViewCell ?? BigTableViewCell()
         cell.lblTitle.text = arrPrin[indexPath.row]
         cell.imIMAGE.image = UIImage(named: arrPrinImages[indexPath.row])
         return cell

@@ -11,13 +11,7 @@ class Top3ViewController: UIViewController {
     
     @IBOutlet weak var cvTop: UICollectionView!
     @IBOutlet weak var cvBottom: UICollectionView!
-    @IBOutlet weak var tbleviewInicial: UITableView!{
-        didSet{
-            self.tbleviewInicial.delegate = self
-            self.tbleviewInicial.dataSource = self
-            self.tbleviewInicial.register(UINib(nibName: "BigTableViewCell", bundle: .main), forCellReuseIdentifier: "BigTableViewCell")
-        }
-    }
+    @IBOutlet weak var tbleviewInicial: UITableView!
     
     
     let cateDate: DataCate = DataCate()
@@ -32,14 +26,19 @@ class Top3ViewController: UIViewController {
         super.viewDidLoad()
         self.arreElementosTop = categoria.setCateg()
         print("\n\n\n  arreCatego --->  \(arreElementosTop.count)    \n\n\n")
-        self.setUpCollectonview()
+        self.setUpCellOnViews()
     }
     
-    func setUpCollectonview(){
-        cvTop.delegate = self
-        cvTop.dataSource = self
-        cvTop.tag = 777
-        cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+    func setUpCellOnViews(){
+//
+        self.cvTop.delegate = self
+        self.cvTop.dataSource = self
+        self.cvTop.tag = 777
+        self.cvTop.register(Top3CollectionViewCell.nib, forCellWithReuseIdentifier: Top3CollectionViewCell.identifier)
+//
+//        self.tbleviewInicial.delegate = self
+//        self.tbleviewInicial.dataSource = self
+//        self.tbleviewInicial.register(BigTableViewCell.nib, forCellReuseIdentifier: BigTableViewCell.identifier)
         
 //        cvBottom.delegate = self
 //        cvBottom.dataSource = self
